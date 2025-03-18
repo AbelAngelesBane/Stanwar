@@ -1,35 +1,39 @@
 import Image from "next/image"
-const FriendRequest = ()=>{
+const BirthdayCard = () => {
+
     const sampleProfiles = [{
         id:0,
-        name: "Teresita Marquez",
+        name: "Michael Novotny",
         img: "https://images.unsplash.com/photo-1739188366834-1281a22a1ac5?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {   id:1,
-        name: "Benedick Marti",
+        name: "Brian Kinney",
         img: "https://images.unsplash.com/photo-1739932900241-4d3362b5ed8e?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     }
-]
+    ]
     return (
         <div className="bg-white w-full rounded-sm p-4 text-sm flex flex-col">
-            <div className="flex flex-row place-content-between">
-                <span className="text-slate-400 cursor-pointer">Friend Request</span>
-                <span className="text-blue-500 cursor-pointer">See all</span>
-            </div>
+            <span className="text-slate-400 font-bold">Birthdays</span>
+
+
+            {/*PROFILE CARDS*/}
             {sampleProfiles.map(profile => 
-            <div className="flex flex-row gap-2 mt-2" key={profile.id}>
+            <div className="flex flex-row gap-2 mt-4" key={profile.id}>
                 <Image src={profile.img} className="w-8 h-8 object-cover rounded-full" alt="profile-pic" width={32} height={32}/>
                 <span className="flex flex-1 items-center font-bold p-2 cursor-pointer">{profile.name}</span>
-                <div className="flex flex-row items-center gap-2">
-                    <div className="bg-blue-400 w-5 h-5 rounded-full text-white accept-decline-btn"><center>✓</center></div>
-                    <div className="bg-gray-300 w-5 h-5 rounded-full text-white accept-decline-btn"><center>x</center></div>
-                </div>
+                <button className="celebrate-btn">Celebrate</button>
             </div>
             )               
             }
 
+            <div className="flex flex-row p-4 bg-slate-100 content-center gap-2 items-center mt-4">
+                <Image src="/gift.png" className="w-6 h-6"  height={24} width={24} alt="gift"/>
+                <div className="cursor-pointer">
+                    <span className="font-bold text-slate-600">Upcoming Birthdays</span>
+                    <p>See other 16 have birthdays</p>
+                </div>
+            </div>
         </div>
     )
 }
-
-export default FriendRequest
+export default BirthdayCard

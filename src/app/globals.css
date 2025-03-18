@@ -25,3 +25,15 @@ body {
 .accept-decline-btn:hover{
   @apply text-black opacity-80 cursor-pointer
 }
+.celebrate-btn{
+  @apply flex flex-row items-center gap-2 bg-blue-400 rounded-md text-sm text-white p-4 h-2 w-fit cursor-pointer 
+}
+button:hover{
+  @apply opacity-80
+}
+.category-item:hover{
+  @apply bg-slate-100 cursor-pointer
+}
+.banner{
+  @apply h-[200px] bg-cover w-full bg-[url(https://images.unsplash.com/photo-1733503711060-1df31554390f?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)]
+}

@@ -31,7 +31,7 @@ const Feed = () => {
     }
     
     return (
-        <div className="bg-white rounded-lg text-black p-4">
+        <div className="bg-white rounded-lg text-black p-4 feed">
             {/* Profile Information */}
             <div className="flex flex-row gap-4">
                 <Image src="https://images.unsplash.com/photo-1740482801914-6b6b928ba062?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" className="w-8 h-8 object-cover rounded-full" alt="profile-pic" width={32} height={32}/>
@@ -46,25 +46,25 @@ const Feed = () => {
 
             <div className="text-slate-400 flex flex-row gap-4 mt-4">
                 {/* Like */}
-                <div className="flex flex-row flex-1 gap-4 rounded-lg bg-blue-100 p-2 items-center text-sm justify-center cursor-pointer">
+                <button className="flex flex-row flex-1 gap-4 rounded-lg bg-blue-100 p-2 items-center text-sm justify-center cursor-pointer">
                     <Image src="/like.png" alt="like" className="w-4 h-4" width={16} height={16}/>
                     |
                     <span>124</span>
-                </div>
+                </button>
 
                 {/* Comment */}
-                <div className="flex flex-row flex-1 gap-4 rounded-lg bg-blue-100 p-2 items-center text-sm justify-center cursor-pointer">
+                <button className="flex flex-row flex-1 gap-4 rounded-lg bg-blue-100 p-2 items-center text-sm justify-center cursor-pointer">
                     <Image src="/comment.png" alt="comment" className="w-4 h-4" width={16} height={16}/>
                     |
                     <span>124</span>
-                </div>
+                </button>
 
                 {/* Share */}
-                <div className="flex flex-row flex-1 gap-4 rounded-lg bg-blue-100 p-2 items-center text-sm justify-center cursor-pointer">
+                <button className="flex flex-row flex-1 gap-4 rounded-lg bg-blue-100 p-2 items-center text-sm justify-center cursor-pointer">
                     <Image src="/share.png" alt="share" className="w-4 h-4" width={16} height={16}/>
                     |
                     <span>124</span>
-                </div>
+                </button>
             </div>
 
             {/* WRITE COMMENT */}
